@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import joblib, os
 from preprocessing import preprocess
 
-app = Flask(__name__, template_folder="../templates", static_folder="../static")
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
 BASE_DIR = os.path.dirname(__file__)
 model = joblib.load(os.path.join(BASE_DIR, "models", "sentiment_model.pkl"))
